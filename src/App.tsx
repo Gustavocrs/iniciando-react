@@ -28,7 +28,6 @@ function App() {
 
         <Btn text="Adicionar" onClick={criarTweet} />
       
-
       {tela}
 
     </div>

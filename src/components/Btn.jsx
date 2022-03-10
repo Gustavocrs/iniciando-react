@@ -6,4 +6,6 @@ export function Btn(props) {
       {props.text}
     </button>
   );
+  
 }
+
