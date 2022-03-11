@@ -1,11 +1,16 @@
 .inputPadrao{
     padding: 10px;
-
+    margin: 20px 0;
+    border: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 15px;
-
     width: 200px;
-
     text-align: center;
-    
+}
+
+.inputPadrao:focus{
+    outline: 0;
+    background-color:cornflowerblue;
+    opacity: 60%;
+    color: aliceblue;
 }

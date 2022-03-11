@@ -1,10 +1,15 @@
 .btnPadrao{
     padding: 10px;
-    margin-bottom: 20px;
-    
+    margin: 20px 0;
+    border: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 15px;
-
     width: 200px;
+}
 
+.btnPadrao:hover{
+    transition: 1s;
+    background-color: cornflowerblue;
+    opacity: 60%;
+    cursor: pointer;
 }

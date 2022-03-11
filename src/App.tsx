@@ -7,17 +7,27 @@ import { Input } from "./components/Input";
 function App() {
   const [tweets, setTweets] = useState([]);
   const [dado, setDado] = useState();
+  const [erro, setErro] = useState("semErro");
   const tela = tweets.map((tweet) => {
     return <Tweet text={tweet} />;
   });
 
   function criarTweet() {
-    setTweets([...tweets, dado]);
+    if (dado == undefined) {
+      setErro("erro");
+    } else {
+      if (dado == "") {
+        setDado(undefined);
+      } else {
+        setTweets([...tweets, dado]);
+        setErro("semErro");
+      }
+    }
   }
 
   return (
     <div className="container">
-    
+      <div>
         <Input
           type="text"
           text="Nome do Projeto"
@@ -27,9 +37,10 @@ function App() {
         />
 
         <Btn text="Adicionar" onClick={criarTweet} />
-      
-      {tela}
 
+      </div>
+      <span className={erro}>Digite algo</span>
+      {tela}
     </div>
   );
 }
